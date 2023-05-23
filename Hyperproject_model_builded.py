@@ -14,16 +14,16 @@ import streamlit  as st
 from streamlit_option_menu import option_menu
 
 
-hypo_loading_model = pickle.load(open("trained_project_model.sav","rb"))
+hypo_loading_model1 = pickle.load(open("trained_project_model.sav","rb"))
 #hyper_loading_model = pickle.load(open("C:/Users/Ullas Chandran/OneDrive/Desktop/PROJECT_THYROID/hyperthyroidmodelnew.sav","rb"))
-hyper_loading_model = pickle.load(open("fphyperthyroidmodel.sav","rb"))
+hyper_loading_model2 = pickle.load(open("fphyperthyroidmodel.sav","rb"))
 
 
 def check_hypothyroid(input_data):
   input_data = np.asarray(input_data)
   input_data = input_data.reshape(1,-1)
 # model = loading_model.fit(X_train,y_train)
-  result = hypo_loading_model.predict(input_data)
+  result = hypo_loading_model1.predict(input_data)
   if result == [1] :
     return "Patient has Thyroid"
   else :
@@ -34,7 +34,7 @@ def check_hyperthyroid(input_data):
   input_data = np.asarray(input_data)
   input_data = input_data.reshape(1,-1)
 # model = loading_model.fit(X_train,y_train)
-  result = hyper_loading_model.predict(input_data)
+  result = hyper_loading_model2.predict(input_data)
   if result == [1] :
     return "Patient has Thyroid"
   else :
