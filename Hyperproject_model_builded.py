@@ -34,15 +34,7 @@ def check_hyperthyroid(input_data):
   input_data = np.asarray(input_data)
   input_data = input_data.reshape(1,-1)
   
-  
-  
-  
-
-
-
-  
-# model = loading_model.fit(X_train,y_train)
-  result = hyp0_loading_model.predict(input_data)
+  result = hypo_loading_model.predict(input_data)
   if result == [1] :
     return "Patient has Thyroid"
   else :
