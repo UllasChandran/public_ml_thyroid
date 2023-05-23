@@ -58,7 +58,7 @@ with st.sidebar :
     selected = option_menu("COMPLETE THYROID PREDICTION SYSTEM",["Hypothyroid system","Hyperthyroid system"] , icons=["heart","person"] , default_index=0)
 
 if (selected == "Hypothyroid system"):
-    st.title("HYPO THYROID PREDICTION SYSTEM")
+    st.title("HYPOTHYROID PREDICTION SYSTEM")
     
     
     
@@ -85,7 +85,7 @@ if (selected == "Hypothyroid system"):
     st.success(diagnosis)
     
 if (selected == "Hyperthyroid system") :
-    st.title("HYPER THYROID PREDICTION SYSTEM")
+    st.title("HYPERTHYROID PREDICTION SYSTEM")
     TSH = st.text_input("ENTER THE VALUE OF TSH")
     T3 = st.text_input("ENTER THE VALUE OF T3")
     TT4 = st.text_input("ENTER THE VALUE OF TT4")
