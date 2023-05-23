@@ -15,8 +15,8 @@ from streamlit_option_menu import option_menu
 
 
 hypo_loading_model = pickle.load(open("trained_project_model.sav","rb"))
-#hyper_loading_model = pickle.load(open("C:/Users/Ullas Chandran/OneDrive/Desktop/PROJECT_THYROID/hyperthyroidmodelnew.sav","rb"))
-#hyper_loading_model2 = pickle.load(open("fphyperthyroidmodel.sav","rb"))
+# hyper_loading_model = pickle.load(open("C:/Users/Ullas Chandran/OneDrive/Desktop/PROJECT_THYROID/hyperthyroidmodelnew.sav","rb"))
+hyper_loading_model2 = pickle.load(open("fphyperthyroidmodel.sav","rb"))
 
 
 def check_hypothyroid(input_data):
@@ -33,8 +33,26 @@ def check_hypothyroid(input_data):
 def check_hyperthyroid(input_data):
   input_data = np.asarray(input_data)
   input_data = input_data.reshape(1,-1)
+  
+  
+  
+  
+
+
+
+  from sklearn.decomposition import PCA
+  pca = PCA(n_components=10)
+
+  v = pca.fit_transform(input_data)
+
+  X_pca = pd.DataFrame(data = v, columns = ['component_1', 'component_2', 'component_3', 'component_4', 'component_5', 'component_6', 'component_7', 'component_8', 'component_9','component_10'])
+
+  from sklearn.preprocessing import MinMaxScaler
+  scaler = MinMaxScaler()
+  for i in X_pca.columns:
+    X_pca[i] = scaler.fit_transform(X_pca[[i]])
 # model = loading_model.fit(X_train,y_train)
-  result = hypo_loading_model.predict(input_data)
+  result = hyper_loading_model.predict(input_data)
   if result == [1] :
     return "Patient has Thyroid"
   else :
