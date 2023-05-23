@@ -14,9 +14,9 @@ import streamlit  as st
 from streamlit_option_menu import option_menu
 
 
-hypo_loading_model = pickle.load(open("C:/Users/Ullas Chandran/OneDrive/Desktop/PROJECT_THYROID/trained_project_model.sav","rb"))
+hypo_loading_model = pickle.load(open("trained_project_model.sav","rb"))
 #hyper_loading_model = pickle.load(open("C:/Users/Ullas Chandran/OneDrive/Desktop/PROJECT_THYROID/hyperthyroidmodelnew.sav","rb"))
-hyper_loading_model = pickle.load(open("C:/Users/Ullas Chandran/OneDrive/Desktop/PROJECT_THYROID/fphyperthyroidmodel.sav","rb"))
+hyper_loading_model = pickle.load(open("fphyperthyroidmodel.sav","rb"))
 
 
 def check_hypothyroid(input_data):
