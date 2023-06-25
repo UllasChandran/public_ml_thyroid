@@ -86,10 +86,10 @@ if (selected == "Hypothyroid system"):
     
 if (selected == "Hyperthyroid system") :
     st.title("HYPERTHYROID PREDICTION SYSTEM")
-    TSH = st.text_input("ENTER THE VALUE OF TSH")
-    T3 = st.text_input("ENTER THE VALUE OF T3")
-    TT4 = st.text_input("ENTER THE VALUE OF TT4")
-    FTI = st.text_input("ENTER THE VALUE OF FTI")
+    TSH1 = st.text_input("ENTER THE VALUE OF TSH")
+    T31 = st.text_input("ENTER THE VALUE OF T3")
+    TT41 = st.text_input("ENTER THE VALUE OF TT4")
+    FTI1 = st.text_input("ENTER THE VALUE OF FTI")
     
     
     #col1 , col2 , col3 ,col4 = st.columns(4)
@@ -109,7 +109,7 @@ if (selected == "Hyperthyroid system") :
     print("djbjsklkj")
     
     if st.button("TEST RESULTS" ):
-        diagnosis = check_hyperthyroid((TSH,T3,TT4,FTI))
+        diagnosis = check_hyperthyroid((TSH1,T31,TT41,FTI1))
         
     st.success(diagnosis)
 
