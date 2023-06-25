@@ -66,6 +66,7 @@ if (selected == "Hypothyroid system"):
     T3 = st.text_input("ENTER THE VALUE OF T3")
     TT4 = st.text_input("ENTER THE VALUE OF TT4")
     FTI = st.text_input("ENTER THE VALUE OF FTI")
+
     
    # col1 , col2 , col3 ,col4 = st.columns(4)
    # with col1 :
@@ -80,6 +81,8 @@ if (selected == "Hypothyroid system"):
     diagnosis = ""
     
     if st.button("TEST RESULTS" ):
+        if TSH  == 1 :
+          st.info("Give values")
         diagnosis = check_hypothyroid((TSH,T3,TT4,FTI))
         
     st.success(diagnosis)
