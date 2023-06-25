@@ -81,9 +81,16 @@ if (selected == "Hypothyroid system"):
     diagnosis = ""
     
     if st.button("TEST RESULTS" ):
-        if TSH  == 1 :
-          st.info("Give values")
-        diagnosis = check_hypothyroid((TSH,T3,TT4,FTI))
+        if int(TSH) not in range(0,6) :
+            st.info("Give TSH Values between 0.5 and 5.0")
+        elif int(TT4) not in range(5,13) :
+            st.info("Give TT4 Values between 5.0 and 12.0")
+        elif int(T3) not in range(80,221) :
+            st.info("Give T3 Values between 80 and 220")
+        elif int(FTI) not in range(80,221) :
+            st.info("Give FTI Values between 80 and 220")
+       else :
+            diagnosis = check_hypothyroid((TSH,T3,TT4,FTI))
         
     st.success(diagnosis)
     
