@@ -89,7 +89,7 @@ if (selected == "Hypothyroid system"):
             st.info("Give T3 Values between 80 and 220")
         elif int(FTI) not in range(80,221) :
             st.info("Give FTI Values between 80 and 220")
-       else :
+        else :
             diagnosis = check_hypothyroid((TSH,T3,TT4,FTI))
         
     st.success(diagnosis)
