@@ -119,7 +119,16 @@ if (selected == "Hyperthyroid system") :
     print("djbjsklkj")
     
     if st.button("TEST RESULTS" ):
-        diagnosis = check_hyperthyroid((TSH1,T31,TT41,FTI1))
+        if int(TSH1) not in range(0,6) :
+            st.info("Give TSH Values between 0.5 and 5.0")
+        elif int(TT41) not in range(5,13) :
+            st.info("Give TT4 Values between 5.0 and 12.0")
+        elif int(T31) not in range(80,221) :
+            st.info("Give T3 Values between 80 and 220")
+        elif int(FTI1) not in range(80,221) :
+            st.info("Give FTI Values between 80 and 220")
+        else :
+            diagnosis = check_hyperthyroid((TSH1,T31,TT41,FTI1))
         
     st.success(diagnosis)
 
