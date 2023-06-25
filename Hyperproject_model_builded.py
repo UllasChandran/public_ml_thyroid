@@ -81,9 +81,9 @@ if (selected == "Hypothyroid system"):
     diagnosis = ""
     
     if st.button("TEST RESULTS" ):
-        if int(TSH) not in range(0,6) :
+        if int(TSH) not in range(0,250) :
             st.info("Give TSH Values between 0.5 and 5.0")
-        elif int(TT4) not in range(5,13) :
+        elif int(TT4) not in range(5,260) :
             st.info("Give TT4 Values between 5.0 and 12.0")
         elif int(T3) not in range(80,221) :
             st.info("Give T3 Values between 80 and 220")
@@ -119,9 +119,9 @@ if (selected == "Hyperthyroid system") :
     print("djbjsklkj")
     
     if st.button("TEST RESULTS" ):
-        if int(TSH1) not in range(0,6) :
+        if int(TSH1) not in range(0,260) :
             st.info("Give TSH Values between 0.5 and 5.0")
-        elif int(TT41) not in range(5,13) :
+        elif int(TT41) not in range(5,270) :
             st.info("Give TT4 Values between 5.0 and 12.0")
         elif int(T31) not in range(80,221) :
             st.info("Give T3 Values between 80 and 220")
