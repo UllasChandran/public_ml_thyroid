@@ -83,11 +83,11 @@ if (selected == "Hypothyroid system"):
     if st.button("TEST RESULTS" ):
         if int(TSH) not in range(0,250) :
             st.info("Incorrect value for TSH ")
-        elif int(TT4) not in range(5,260) :
+        elif int(TT4) not in range(1,260) :
             st.info("Incorrect value for TT4 ")
-        elif int(T3) not in range(80,221) :
+        elif int(T3) not in range(1,221) :
             st.info("Incorrect value for  T3 ")
-        elif int(FTI) not in range(80,221) :
+        elif int(FTI) not in range(1,221) :
             st.info("Incorrect value for  FTI ")
         else :
             diagnosis = check_hypothyroid((TSH,T3,TT4,FTI))
@@ -121,11 +121,11 @@ if (selected == "Hyperthyroid system") :
     if st.button("TEST RESULTS" ):
         if int(TSH1) not in range(0,260) :
             st.info("Incorrect value for TSH ")
-        elif int(TT41) not in range(5,270) :
+        elif int(TT41) not in range(1,270) :
             st.info("Incorrect value for TT4 ")
-        elif int(T31) not in range(80,221) :
+        elif int(T31) not in range(1,221) :
             st.info("Incorrect value for T3 ")
-        elif int(FTI1) not in range(80,221) :
+        elif int(FTI1) not in range(1,221) :
             st.info("Incorrect value for FTI ")
         else :
             diagnosis = check_hyperthyroid((TSH1,T31,TT41,FTI1))
